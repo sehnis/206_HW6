@@ -77,7 +77,7 @@ def access_third_elem(seq):
 ## End
 
 # Write your equivalent function and assignment statement here
-
+sample_func = (lambda seq: seq[2])
 
 ## [PROBLEM 4]
 print("\n\n***** Problem 4 *****")
@@ -89,20 +89,19 @@ programs_written = [10, 500, 20, 131, 46]
 ## End provided code
 
 # Given that provided code, write one line of code to create a zip iterator instance saved in a variable called student_tups, here:
-
+student_tups = zip(names, seniority, programs_written)
 
 # Then write a line of code to cast the iterator to a list (it should end up as a list of tuples). Save that list in a variable called student_tups_list.
-
+student_tups_list = list(student_tups)
 
 ## You can test this out with any code you like here, and similar below other problems, but make sure to comment out any code that uses up the iterator in order to pass the tests!
-    
 
 
 ## [PROBLEM 5]
 print("\n\n***** Problem 5 *****")
 # Use a list comprehension to create a list of Student instances out of the student_tups list you just created in Problem 2, and save that list in a variable called programmers. You should make sure you pass these tests before continuing, as you'll need this list for problems later on!
 
-
+programmers = [Student(n, s, pw) for n, s, pw in student_tups_list]
 
 ## [PROBLEM 6]
 print("\n\n***** Problem 6 *****")
