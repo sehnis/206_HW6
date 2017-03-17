@@ -31,6 +31,8 @@ class Student():
         return this_Student.years_UM
 
     # Define the additional method here
+    def write_programs(self, to_add = 1):
+        self.num_programs += to_add
     
 
 #### DONE WITH STUDENT CLASS DEFINITION
@@ -56,8 +58,11 @@ print("\n\n***** Problem 2 *****")
 ## The function should return the new list of accumulated -- mapped! -- values.
 ## HINT: you should be able to write this in 5 lines of code or fewer! 
 
-
-
+def personal_map(function_object, input_list):
+    new_list = []
+    for list_item in input_list:
+        new_list.append(function_object(list_item))
+    return new_list
 
 ## [PROBLEM 3]
 print("\n\n***** Problem 3 *****")
